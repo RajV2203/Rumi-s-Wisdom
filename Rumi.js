@@ -1,7 +1,7 @@
 let lines = [];
     let currentLine = 0;
 
-    fetch('words.txt')
+    fetch('Words.txt')
       .then(response => response.text())
       .then(text => {
         lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
@@ -26,4 +26,5 @@ let lines = [];
         currentLine = (currentLine + 1) % lines.length;
         document.getElementById('output').textContent = lines[currentLine];
       }
+
     });
