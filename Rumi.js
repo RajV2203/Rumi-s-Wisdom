@@ -26,5 +26,4 @@ let lines = [];
         currentLine = (currentLine + 1) % lines.length;
         document.getElementById('output').textContent = lines[currentLine];
       }
-
     });
